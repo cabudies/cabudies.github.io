@@ -10,8 +10,8 @@ import logo from "../../images/only_logo_1.svg";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
 import { BrowserRouter as Router, Switch, Route, HashRouter, Link } from "react-router-dom";
-import ContactUsPage from "pages/ContactUs.js";
-import PortfolioPage from "components/cards/TabCardGrid.js";
+import ContactUsPage from "../../pages/ContactUs.js";
+import PortfolioPage from "../../components/cards/TabCardGrid.js";
 
 const Header = tw.header`
   flex justify-between items-center

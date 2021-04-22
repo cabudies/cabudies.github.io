@@ -1,15 +1,15 @@
 import React from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Hero from "components/hero/TwoColumnWithInput.js";
-import Team from "components/cards/ProfileThreeColGrid.js";
-import MainFeature2 from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
-import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
-import FAQ from "components/faqs/SingleCol.js";
-import ContactUs from "components/forms/SimpleContactUs.js";
-import Footer from "components/footers/MiniCenteredFooter.js";
-import prototypeIllustrationImageSrc from "images/prototype-illustration.svg";
+import AnimationRevealPage from "../helpers/AnimationRevealPage.js";
+import Hero from "../components/hero/TwoColumnWithInput.js";
+import Team from "../components/cards/ProfileThreeColGrid.js";
+import MainFeature2 from "../components/features/TwoColWithTwoHorizontalFeaturesAndButton.js";
+import Testimonial from "../components/testimonials/TwoColumnWithImageAndRating.js";
+import FAQ from "../components/faqs/SingleCol.js";
+import ContactUs from "../components/forms/SimpleContactUs.js";
+import Footer from "../components/footers/MiniCenteredFooter.js";
+import prototypeIllustrationImageSrc from "../images/prototype-illustration.svg";
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg";
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg";
 import { ReactComponent as TransparentIcon } from "feather-icons/dist/icons/eye.svg";

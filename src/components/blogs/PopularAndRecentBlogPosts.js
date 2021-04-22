@@ -3,11 +3,11 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading } from "components/misc/Headings.js";
-import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
-import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Header from "components/headers/light.js";
-import Footer from "components/footers/MiniCenteredFooter.js";
+import { SectionHeading } from "../misc/Headings.js";
+import { Container, ContentWithPaddingXl } from "../misc/Layouts.js";
+import AnimationRevealPage from "../../helpers/AnimationRevealPage.js";
+import Header from "../headers/light.js";
+import Footer from "../footers/MiniCenteredFooter.js";
 
 const Row = tw.div`flex flex-col lg:flex-row -mb-10`;
 const Heading = tw(SectionHeading)`text-left lg:text-4xl xl:text-5xl`;
