@@ -1,25 +1,50 @@
-import "tailwindcss/dist/base.css";
-import "../src/styles/globalStyles.css";
-import React from "react";
-import { css } from "styled-components/macro"; //eslint-disable-line
+import React, { useState, useEffect } from "react";
+import Preloader from "../src/components/Pre";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer";
+import Resume from "./components/Resume/ResumeNew";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import "./style.css";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import HomePage from "../src/demos/SaaSProductLandingPage.js";
-import ContactUsPage from "../src/pages/ContactUs.js";
-import BlogIndexPage from "../src/components/blogs/PopularAndRecentBlogPosts.js";
-import PortfolioPage from "../src/components/cards/TabCardGrid.js";
-import CoursesPage from "../src/components/cards/ThreeColSlider.js";
+function App() {
+  const [load, upadateLoad] = useState(true);
 
-import { Route, HashRouter, withRouter, Switch } from "react-router-dom";
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
 
-export default function App() {
-  
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/contact-us" component={ContactUsPage} />
-        <Route path="/portfolio" component={PortfolioPage} />
-      </Switch>
-    </div>
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="*" element={<Navigate to="/"/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
+
+export default App;
